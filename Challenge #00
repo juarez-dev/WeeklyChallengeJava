@@ -1,0 +1,34 @@
+/*
+ * PROGRAMMING CHALLENGE #00
+    * Syntax, Variables and Data Types
+ */
+package retos;
+
+public class App {
+
+    // Java Official Documentation: https://docs.oracle.com/en/java/javase/17/docs/api/index.html
+
+    // 1. Constant variable.
+    public static final String GREETING = "Hello Madafaka World!.";
+
+    // 2. Privitive data types.
+    public byte aByte = 127; // 8 bits, range: -128 to 127, represents small integers.
+    public short aShort = 32767; // 16 bits, range: -32768 to 32767,  represent small integers.
+    public int anInt = 2147483647; // 32 bits, range: -2147483648 to 2147483647, represent small integers.
+    public long aLong = 9223372036854775807L; // 64 bits, range: -9223372036854775808 to 9223372036854775807, represent small integers.
+    public float aFloat = 3.14f; // 32 bits, range: 1.4E-45 to 3.4028235E38, represent small decimal numbers.
+    public double aDouble = 3.141592653589793; // 64 bits, range: 4.9E-324 to 1.7976931348623157E308, represent small decimal numbers.
+    public char aChar = 'A'; // 16 bits, represents a single character
+    public boolean aBoolean = true; // 1 bit, values: true or false
+
+    // 3. Non-primitive data types.
+    public String aString = "This is Java"; // represents a sequence of characters
+    
+    public String getGreeting() {
+        return GREETING + " " + aString;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new App().getGreeting());
+    }
+}
