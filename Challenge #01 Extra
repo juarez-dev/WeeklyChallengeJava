@@ -19,7 +19,7 @@ public class App{
         for ( int i=10; i<=55 ; i +=2 ){
             if ( i%3!=0 && i!=16 ){
                 System.out.println(i); 
+            }
         }
-
     }
 }
