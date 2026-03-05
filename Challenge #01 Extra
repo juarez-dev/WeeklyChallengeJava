@@ -9,6 +9,7 @@ public class App{
     public static void main(String[] args){
 
         // Method 1
+        System.out.println("Method 1");
         for ( int i=10; i<=55; i++ ){
             if ( i%3!=0 && i%2==0 && i!=16 ){
                 System.out.println(i);
@@ -16,6 +17,7 @@ public class App{
         }
 
         // Method 2
+        System.out.println("Method 2");
         for ( int i=10; i<=55 ; i +=2 ){
             if ( i%3!=0 && i!=16 ){
                 System.out.println(i); 
