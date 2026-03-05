@@ -1,0 +1,201 @@
+/*
+ * PROGRAMMING CHALLENGE #01
+    * Operators and Control Structures
+ */
+package retos;
+
+public class App {
+
+    public static void main(String[] args) {
+
+        // 1. EXAMPLES OF ALL OPERATORS IN JAVA.
+        int a = 10, b = 5;
+        System.out.println("Arithmetic Operators:");
+        // Addition
+        System.out.println("a + b = " + (a + b));
+        // Substraction
+        System.out.println("a - b = " + (a - b));
+        // Multiplication
+        System.out.println("a * b = " + (a * b));
+        // Division
+        System.out.println("a / b = " + (a / b));
+        // Modulus -> Remainder of the division
+        System.out.println("a % b = " + (a % b));
+
+        System.out.println("\nRelational Operators:");
+        // Equality
+        System.out.println("a == b: " + (a == b));
+        // Inequality
+        System.out.println("a != b: " + (a != b));
+        // Greater than
+        System.out.println("a > b: " + (a > b));
+        // Less than
+        System.out.println("a < b: " + (a < b));
+        // Greater than or equal to
+        System.out.println("a >= b: " + (a >= b));
+        // Less than or equal to
+        System.out.println("a <= b: " + (a <= b));
+
+        System.out.println("\nLogical Operators:");
+        // Variable boolean values -> true and false
+        boolean x = true, y = false;
+        // Logical AND
+        System.out.println("x && y: " + (x && y));
+        // Logical OR
+        System.out.println("x || y: " + (x || y));
+        // Logical NOT
+        System.out.println("!x: " + (!x));
+
+        System.out.println("\nBitwise Operators:");
+        int c = 6, d = 3; // 6 = 110 in
+        // AND bit by bit
+        System.out.println("c & d: " + (c & d));
+        // Or bit by bit
+        System.out.println("c | d: " + (c | d));
+        // Exclusive OR bit by bit
+        System.out.println("c ^ d: " + (c ^ d)); 
+        // NOT bit by bit
+        System.out.println("~c: " + (~c));
+        // Left shift -> Move bits to the Left and fill with 0s
+        System.out.println("c << 1: " + (c << 1)); 
+        // Right shift -> Move bits to the Right and fill with 0s
+        System.out.println("c >> 1: " + (c >> 1)); 
+        // Unsigned right shift -> Move bits to the Right and fill with 0s, not considering the sign of the number
+        System.out.println("c >>> 1: " + (c >>> 1));
+
+        System.out.println("\nAssignment Operators:");
+        int e = 10;
+        // Addition assignment
+        e += 5; // e = e + 5
+        System.out.println("e += 5: " + e);
+        // Subtraction assignment
+        e -= 3; // e = e - 3
+        System.out.println("e -= 3: " + e);
+        // Multiplication assignment
+        e *= 2; // e = e * 2
+        System.out.println("e *= 2: " + e);
+        // Division assignment
+        e /= 4; // e = e / 4
+        System.out.println("e /= 4: " + e);
+        // Modulus assignment
+        e %= 3; // e = e % 3
+        System.out.println("e %= 3: " + e);
+
+        System.out.println("\nUnary Operators:");
+        int f = 5;
+        // Post-increment
+        System.out.println("f++: " + (f++)); 
+        // Pre-increment
+        System.out.println("++f: " + (++f)); 
+        // Post-decrement
+        System.out.println("f--: " + (f--)); 
+        // Pre-decrement
+        System.out.println("--f: " + (--f)); 
+
+        System.out.println("\nTernary Operator:");
+        int g = 10, h = 20;
+        // Ternary operator (have three parts)-> condition ? value if true : value if false
+        String result = (g > h) ? "g is greater than h" : "g is not greater than h";
+        System.out.println(result);
+
+
+        // 2. EXAMPLES OF ALL CONTROL STRUCTURES IN JAVA.
+        System.out.println("\nControl Structures:");
+
+        // If-else statement
+        int number = 10;
+        if (number > 0) {
+            System.out.println("The number is positive.");
+        } else if (number < 0) {
+            System.out.println("The number is negative.");
+        } else {
+            System.out.println("The number is zero.");
+        }
+
+        // Switch statement
+        int day = 3;
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Invalid day");
+        }
+
+        // LOOPS
+        // For loop
+        System.out.println("\nFor Loop:");
+        for (int i = 0; i < 5; i++) {
+            System.out.println("i: " + i);
+        }
+
+        // For-each loop (used to iterate over arrays or collections)
+        System.out.println("\nFor-Each Loop:");
+        String[] fruits = {"Apple", "Banana", "Cherry"};
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+
+        // While loop
+        System.out.println("\nWhile Loop:");
+        int j = 0;
+        while (j < 5) {
+            System.out.println("j: " + j);
+            j++;
+        }
+
+        // Do-while loop
+        System.out.println("\nDo-While Loop:");
+        int k = 0;
+        do {
+            System.out.println("k: " + k);
+            k++;
+        } while (k < 5);
+
+        // FLOW CONTROL
+        // Break statement
+        System.out.println("\nBreak Statement:");
+        for (int i = 0; i < 10; i++) {
+            if (i == 5) {
+                break; // Exit the loop when i is 5
+            }
+            System.out.println("i: " + i);    
+        }
+        // Continue statement
+        System.out.println("\nContinue Statement:");
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 == 0) {
+                continue; // Skip the rest of the loop when i is even
+            }
+            System.out.println("i: " + i);
+        }
+        // Return statement
+        System.out.println("\nReturn Statement:");
+        for (int i= 0; i < 10; i++) {
+            if (i == 5) {
+                System.out.println("Returning from the method at i = " + i);
+                return; // Exit the main method when i is 5
+            }
+            System.out.println("i: " + i);
+        }
+        
+    }
+}
