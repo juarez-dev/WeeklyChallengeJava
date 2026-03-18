@@ -1,0 +1,32 @@
+/*
+* PROGRAMMING CHALLENGE #02 EXTRA
+* Methods and Functions in Java
+*/
+
+package retos;
+
+public class App{
+    public static void main(String[] args){
+        function("string one", "string two");
+    }
+
+    public static int function(String stringOne, String stringTwo){
+
+        int counter = 0;
+        
+        for(int i=1; i<=100; i++){
+            if(i%3 == 0 && i%5 == 0){
+                System.out.println(stringOne + " " + stringTwo);
+            } else if(i%3 == 0){
+                System.out.println(stringOne);
+            }else if (i%5 == 0){
+                System.out.println(stringTwo);
+            } else{
+                counter ++;
+                System.out.println(i);
+            }
+        }
+
+        return counter;
+    }
+}
