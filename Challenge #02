@@ -1,0 +1,73 @@
+/*
+* PROGRAMMING CHALLENGE #02
+* Methods and Functions in Java
+*/
+
+package retos;
+
+public class App{
+    public static void main(String[] args){
+    }
+
+    //Method with no parameters and no return value
+    public static void greet(){
+        System.out.println("Hello, World!");
+    }
+
+    //Method with parameters and no return value
+    public static void greetPerson(String name){
+        System.out.println("Hello, " + name + "!");
+    }
+
+    //Method with no parameters and a return value
+    public static String getGreeting(){
+        return "Hello, World!";
+    }
+
+    //Method with parameters and a return value
+    public static String getPersonalGreeting(String name){
+        return "Hello, " + name + "!";
+    }
+
+    //Method with multiple parameters and a return value
+    public static String getFullName(String firstName, String lastName){
+        return firstName + " " + lastName;
+    }
+
+    //Method with variable number of parameters
+    public static int sum(int... numbers){
+        int total = 0;
+        for(int number : numbers){
+            total += number;
+        }
+        return total;
+    }
+
+    //Instance method (non-static)
+    public class Person {
+        private String name;
+
+        public Person(String name){
+            this.name = name;
+        }
+
+        public void greet(){
+            System.out.println("Hello, " + name + "!");
+        }
+    }   
+
+    //Overloaded method
+    public int sumar(int a, int b){
+        return a + b;}
+    public double sumar(double a, double b){
+        return a + b;}
+
+    //Overridden method
+    class Animal {
+        void sound() {
+            System.out.println("Makes a sound");}}
+    class Dog extends Animal {
+        @Override
+        void sound() {
+            System.out.println("Barks");}}
+}
