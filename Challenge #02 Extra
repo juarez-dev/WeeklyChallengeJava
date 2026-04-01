@@ -1,6 +1,11 @@
 /*
 * PROGRAMMING CHALLENGE #02 EXTRA
 * Methods and Functions in Java
+* Function that receives two String parameters and retunrs a number.
+*     If the number is multiple of 3, print the first String parameter.
+*     If the number is multiple of 5, print the second String parameter.
+*     If the number is multiple of both 3 and 5, print both String parameters.
+*     The function return the number of times the number is printed instead of the Strings.
 */
 
 package retos;
