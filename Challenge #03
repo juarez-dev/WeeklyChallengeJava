@@ -1,0 +1,153 @@
+/*
+* PROGRAMMING CHALLENGE #03 
+* Data Estructures in Java
+*/
+
+package retos;
+import java.util.*;
+
+public class App{
+    public static void main(String[] args){
+        //Arrays
+            /*
+            - Stores elements(primitive types or objects) of the same type
+            - Index start at 0
+            - Contiguous memory allocation
+            - Cannot change size dynamically
+             */
+        // Declaration
+        System.out.println("\nTHIS IS AN ARRAY");
+        int[] numberArray = {10,20,30,40,50};
+        System.out.println(Arrays.toString(numberArray));
+        // Insert -> not exist, array is fixed size
+        // Delete -> not exist, arrays is fixed size, it possible simulate it with a 0 valor
+        numberArray[4] = 0;
+        System.out.println(Arrays.toString(numberArray));
+        // Update
+        numberArray[2] = 100;
+        System.out.println(Arrays.toString(numberArray));
+        // Sorting
+        Arrays.sort(numberArray);
+        System.out.println(Arrays.toString(numberArray)+ "\n");
+
+        //List -> Interface, that define (add, remove, get, set, ...)
+            /*
+            - Ordered collection (maintains insertion order)
+            - Allows duplicate elements
+            - Dynamic size (can grow and shirink(reducirse))
+            - Index-bassed acces(start in 0)
+            - Allows null elements
+            - Provides built-in-methods (add, remove, get, set, ...)
+            - Can store objects
+            - Supports iteration (for, for-each, iterator)
+            - Part of the Java Collections Framework
+             */
+        //Definition of an Integer List 
+        System.out.println("THIS IS A LIST");
+        List<Integer> numberList = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
+        // add an element to the List
+        // It is possible to add a number at a specific position, shifting all subsequent elements to the right
+        numberList.add(1,0); // Add 0 at index 0
+        System.out.println(numberList);
+        // remove an list element
+        numberList.remove(0);
+        System.out.println(numberList);
+        // update a position of the list
+        numberList.set(9,1000);
+        System.out.println(numberList);
+        // get a value from a position
+        int value = numberList.get(9);
+        System.out.println(value);
+        // sort the list
+        Collections.sort(numberList);
+        System.out.println(numberList);
+
+        //ArrayList -> Class that implement the interface List
+        /*
+           - Dynamic siza (can grow and shrink)
+           - Maintains insertion order
+           - Allows duplicate elements
+           - Allows null vallues
+           - Fast index-based access
+           - Insertions/deletions can be slow (element shifting)
+           - Internally backed by an array
+           - Not synchronized (no thread-safe)
+           - Part of the Java Collections Framework
+           - Store objects only (uses wrappers(Clases envoltorio) for primitives)
+         */
+        // Definition of an Integer ArrayList
+        ArrayList<Integer> numberArrayList = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
+        // Add -> insert element at specific position (shifts elements to the right)
+        numberArrayList.add(1, 0);
+        System.out.println(numberArrayList);
+        // Remove -> deletes element at index (shifts elements to the left)
+        numberArrayList.remove(0);
+        System.out.println(numberArrayList);
+        // Update -> replaces element at index
+        numberArrayList.set(numberArrayList.size() - 1, 1000);
+        System.out.println(numberArrayList);
+        // Get -> retrieves element at index
+        int valueArray = numberArrayList.get(numberArrayList.size() - 1);
+        System.out.println(valueArray);
+        // Sort -> sorts elements in ascending order
+        Collections.sort(numberArrayList);
+        System.out.println(numberArrayList);
+
+        //Map
+        /*
+            - Interface
+            - Stores key-value pairs
+            - Keys are unique
+            - Values can be duplicated
+            - No index-based (no positional access)
+            - Fast access to values using keys
+            - Allows one null key and multiple null values
+            - Does not guarantee order
+            - Some implementations maintain order (LinkedHashMap, TreeMap)
+            - Provides basic operations: put, get, remove, containsKey
+            - Part of the Java Collection Framework
+            - Stores object only (uses wrapper classes for primnitives)
+         */
+
+        //HashMap
+        /*
+            Class that implement Map
+            - Fast key-based access (average O(1))
+            - Based on a hash table
+            - Not synchronized (not thread-safe)
+            - Store object only
+            - Supports operations like put, get, remove, containsKey
+         */
+
+        //LinkedHshMap & TreeMap
+
+        //Set
+        /*
+         - Interface
+         - Stores unique elements (no duplicates allowed)
+         - No key-value pairs (only values)
+         - No index-based access (no positional access)
+         - Does not guarantee order
+         - Some implementations maintain order (LinkedHashSet, TreeSet)
+         - Allows at most one null element (depends on implementation)
+         - Provides basic operations: add, remove, contains, size
+         - Part of the Java Collection Framework
+         - Stores objects only (uses wrapper classes for primitives)
+        */
+
+        //HashSet
+         /*
+         - Class that implements the Set interface
+         - Stores unique elements (no duplicates allowed)
+         - Does not maintain insertion order
+         - Based on a hash table
+         - Very fast operations (add, remove, contains) - average O(1)
+         - Allows one null element
+         - Not synchronized (not thread-safe)
+         - No ordering guarantees
+         - Part of the Java Collection Framework
+         - Stores objects only (uses wrapper classes for primitives)
+        */
+    }
+
+}
